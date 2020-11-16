@@ -125,7 +125,7 @@ p{
 
   #titlemark{
       display: inline-block;
-      width:80vw;
+      width:auto;
       min-width: 300px;
       background: black;
   }
