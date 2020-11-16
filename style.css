@@ -129,5 +129,8 @@ p{
       min-width: 300px;
       background: black;
   }
+  body{
+    font-size: 24;
+  }
 
 }
