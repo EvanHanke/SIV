@@ -85,8 +85,10 @@ p{
 .sc{
   width: 60vw;
 }
-.imgbox{
-  margin:5px;
+.controlimg{
+  width: 25vw;
+  height:auto;
+  float: left;
 }
 
 .subcontent{
@@ -102,4 +104,30 @@ p{
   padding-left: 1vw;
   padding-right: 5vw;
   color:white;
+}
+
+@media only screen and (orientation: portrait) {
+  #mainimg{
+    width: 70vw;
+    height:auto;
+    float: none;
+  }
+  .imgbox{
+
+  }
+  .controlimg{
+    width: 25vw;
+    height:auto;
+    float: none;
+    display: inline;
+    text-align:left;
+  }
+
+  #titlemark{
+      display: inline-block;
+      width:80vw;
+      min-width: 300px;
+      background: black;
+  }
+
 }

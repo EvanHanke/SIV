@@ -15,7 +15,7 @@ $( function(){
 var contents;
 var selected;
 var shown;
-
+var btns;
 $( function(){
   shown = $("#home");
   shown.css("display", "inline");
@@ -23,29 +23,32 @@ $( function(){
   selected.css("color", "black");
   selected.css("background-color", "white");
 
+  btns = $(".navbtn");
 
   $("#walkthrough").html(w);
 
-  $(".navbtn").mouseenter(
+  btns.mouseenter(
     function(){
       HL($(this));
     });
 
-  $(".navbtn").mouseleave(
+  btns.mouseleave(
     function(){
       if(!$(this)[0].isSameNode(selected[0])){
         unHL($(this));
       }
-    })
+    });
 
-    $(".navbtn").click(
+    btns.on('click touchstart',
       function(){
         if(!$(this)[0].isSameNode(selected[0])){
-          unHL($(selected));
+          unHL(selected);
           selected = $(this);
-          showContent($(".subcontent").eq($(this).index()));
+          HL(selected);
+          showContent($(".subcontent").eq(selected.index()));
         }
-      })
+    });
+
 });
 
 function HL(j){
